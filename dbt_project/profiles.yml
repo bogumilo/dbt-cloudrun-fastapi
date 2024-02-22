@@ -1,0 +1,23 @@
+dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: YOUR_PROJECT
+      dataset: YOUR_DATASET
+      threads: 4
+      location: EU
+      priority: interactive
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+    prod:
+      type: bigquery
+      method: oauth
+      project: YOUR_PROJECT
+      dataset: YOUR_DATASET
+      threads: 4
+      location: EU
+      priority: interactive
+      job_execution_timeout_seconds: 300
+      job_retries: 1
