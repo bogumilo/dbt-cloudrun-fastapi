@@ -13,7 +13,7 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 COPY . .
 
 # Install dbt dependencies
-RUN dbt deps --profiles-dir dbt --project-dir dbt
+RUN dbt deps --profiles-dir dbt_project --project-dir dbt_project
 
 # Run app
 ENTRYPOINT ["python", "app.py"]
